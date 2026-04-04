@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Grafana
+grafana-data/
+
+# Loki
+loki-data/
+
+# Alloy
+alloy-data/
+
+# VS Code
+.vscode/
+
+# Env
+.env
