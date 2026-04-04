@@ -1,9 +1,6 @@
 # Observability-Lab-LGAT
 Local observability stack using Grafana Alloy, Prometheus, and Loki — metrics, logs, and traces collected via Docker with zero cloud dependency.
 
-# observability-lab
-
-> A self-hosted observability stack using Grafana Alloy, Prometheus, and Loki — metrics and logs collected from Docker containers with zero cloud dependency.
 
 ---
 
@@ -136,7 +133,7 @@ Open [http://localhost:12345](http://localhost:12345) to inspect the Alloy pipel
 ## Project Structure
 
 ```
-observability-lab/
+OBSERVABILITY-STACK/
 ├── docker-compose.yml          # Service definitions and network config
 ├── alloy/
 │   └── config.alloy            # Alloy pipeline configuration
