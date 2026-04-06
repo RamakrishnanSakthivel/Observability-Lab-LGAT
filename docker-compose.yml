@@ -61,10 +61,23 @@ services:
       - "3100:3100"
     user: "0"
 
+  tempo:
+   image: grafana/tempo:latest
+   container_name: tempo
+   command: [ "-config.file=/etc/tempo.yaml" ]
+   volumes:
+    - ./tempo/tempo.yaml:/etc/tempo.yaml
+    - tempo-data:/var/tempo
+   ports:
+    - "3200:3200"   # HTTP
+    - "4317:4317"   # OTLP gRPC
+    - "4318:4318"   # OTLP HTTP
+
   
 volumes:
   grafana_data:
   loki-data:
+  tempo-data:
 
 networks:
   observability:
