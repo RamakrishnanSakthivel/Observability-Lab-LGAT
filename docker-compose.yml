@@ -64,6 +64,8 @@ services:
   tempo:
    image: grafana/tempo:latest
    container_name: tempo
+   networks:
+     - observability
    command: [ "-config.file=/etc/tempo.yaml" ]
    volumes:
     - ./tempo/tempo.yaml:/etc/tempo.yaml
