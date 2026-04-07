@@ -62,7 +62,7 @@ services:
     user: "0"
 
   tempo:
-   image: grafana/tempo:latest
+   image: grafana/tempo:2.4.1
    container_name: tempo
    networks:
      - observability
