@@ -75,7 +75,7 @@ services:
 
 
   otel-demo:
-    image: ghcr.io/open-telemetry/opentelemetry-demo:latest
+    image: ghcr.io/open-telemetry/opentelemetry-demo
     container_name: otel-demo
     ports:
       - "8080:8080"
