@@ -73,13 +73,10 @@ services:
    ports:
     - "3200:3200"   # HTTP
 
-  otel-demo:
-   image: ghcr.io/open-telemetry/opentelemetry-demo:latest
-   container_name: otel-demo
-   environment:
-    - OTEL_EXPORTER_OTLP_ENDPOINT=http://alloy:4318
-   ports:
-    - "8080:8080"
+  telemetrygen:
+   image: ghcr.io/open-telemetry/opentelemetry-collector-contrib/telemetrygen:latest
+   container_name: telemetrygen
+   command: ["traces", "--otlp-endpoint=alloy:4317", "--rate=5"]
    depends_on:
     - alloy
     
