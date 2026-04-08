@@ -50,7 +50,7 @@ otelcol.receiver.otlp "default" {
   }
 
   output {
-    traces = [otelcol.processor.otlp.default.input]
+    traces = [otelcol.processor.batch.default.input]
   }
 }
 
