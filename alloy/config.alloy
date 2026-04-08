@@ -50,6 +50,12 @@ otelcol.receiver.otlp "default" {
   }
 
   output {
+    traces = [otelcol.exporter.otlp.default.input]
+  }
+}
+
+otelcol.processor.batch "default" {
+  output {
     traces = [otelcol.exporter.otlp.tempo.input]
   }
 }
@@ -57,6 +63,7 @@ otelcol.receiver.otlp "default" {
 otelcol.exporter.otlp "tempo" {
   client {
     endpoint = "//tempo:4317"
+
     tls {
       insecure = true
     }
